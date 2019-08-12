@@ -2,9 +2,13 @@ from game.classes import Weapon
 
 
 class Sword(Weapon):
-    def __init__(self, damage, attack_range, hit_time, effects, name) -> None:
+    def __init__(self, name: str, damage: int, attack_range: int, hit_time: float, effects: list = None) -> None:
         self.name = name
-        super().__init__(damage, attack_range, hit_time, effects)
+        self.damage = damage
+        self.attack_range = attack_range
+        self.hit_time = hit_time
+        self.effects = effects
+        super().__init__()
 
     def attack(self):
         pass
