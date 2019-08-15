@@ -31,3 +31,13 @@ class Effect(metaclass=ABCMeta):
     @abstractmethod
     def activate(self):
         return NotImplementedError
+
+
+class Character(metaclass=ABCMeta):
+    @abstractmethod
+    def __init__(self) -> None:
+        super().__init__()
+
+    @abstractmethod
+    def attack(self):
+        return NotImplementedError
