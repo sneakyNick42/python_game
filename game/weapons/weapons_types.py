@@ -1,4 +1,4 @@
-from game.classes import Weapon
+from game.classes import Weapon, Character
 
 
 class Sword(Weapon):
@@ -9,8 +9,9 @@ class Sword(Weapon):
         self.effects = effects
         super().__init__()
 
-    def attack(self):
-        pass
+    def attack(self, target: Character):
+        target.hp -= self.damage
+        self.apply_effects(target)
 
-    def apply_effects(self):
+    def apply_effects(self, target: Character):
         pass
